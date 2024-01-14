@@ -5,13 +5,14 @@ import { SpringSuitComponent } from './pages/ide/spring-suit/spring-suit.compone
 import { IntelliJComponent } from './pages/ide/intelli-j/intelli-j.component';
 import { JdkComponent } from './pages/jdk/jdk/jdk.component';
 import { OpenJdkComponent } from './pages/jdk/open-jdk/open-jdk.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path : 'eclipseIde', component : EclipseIdeComponent},
-  { path : 'springSuit', component : SpringSuitComponent},
+  { path : 'eclipse', component : EclipseIdeComponent},
+  { path : 'springsuit', component : SpringSuitComponent},
   { path : 'intellij', component : IntelliJComponent},
-  { path : 'oracleJdk', component : JdkComponent},
-  { path : 'openJdkDownload', component : OpenJdkComponent}
+  { path : 'oraclejdk', component : JdkComponent},
+  { path : 'openjdkdownload', component : OpenJdkComponent}
 ];
 
 @NgModule({

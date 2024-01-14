@@ -6,9 +6,10 @@
     background-color: #ED2647; /* Blue color code */
     color: rgb(5, 5, 5); /* Text color for contrast */
   }
-
-.dropdown mat-mdc-menu-trigger{
-  margin-top: 20px;
+  
+  .dropdown mat-mdc-menu-trigger{
+    margin-top: 20px;
+    max-height: none;
 }  
   
 .navMenu {
