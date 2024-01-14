@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
 import { EclipseIdeComponent } from './pages/ide/eclipse-ide/eclipse-ide.component';
 import { SpringSuitComponent } from './pages/ide/spring-suit/spring-suit.component';
 import { IntelliJComponent } from './pages/ide/intelli-j/intelli-j.component';
@@ -21,7 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     EclipseIdeComponent,
     SpringSuitComponent,
     IntelliJComponent,
