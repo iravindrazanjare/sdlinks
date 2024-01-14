@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 interface DropdownItem {
   label: string;
-  link?: string;
+  route?: string; 
   subItems?: DropdownItem[];
 }
 
@@ -20,16 +20,22 @@ export class NavbarComponent {
         {
           label: 'IDE',
           subItems: [
-            { label: 'Eclipse', link: '/eclipse' },
-            { label: 'Spring Suit', link: '/springsuit' },
-            { label: 'Intellij', link: '/intellij'}
+            { label: 'Eclipse', route: '/eclipseIde' },
+            { label: 'Spring Suit', route: '/springSuit' },
+            { label: 'Intellij', route: '/intellij'}
           ],
         },
-        { label: 'Jdk', subItems : [{label :'Oracle Jdk', link: '/jdk'},{label : 'Open Jdk', link: '/openJdk'}],},
+        { 
+          label: 'Jdk', 
+          subItems : [
+            {label :'Oracle Jdk', route: '/oracleJdk'},
+            {label : 'Open Jdk', route: '/openJdkDownload'}
+          ],
+        },
       ],
     },
-    { label: 'Item 2', link: '/item-2' },
-    { label: 'Item 3', link: '/item-3' },
+    { label: 'Item 2', route: '/item-2' },
+    { label: 'Item 3', route: '/item-3' },
   ];
 
   anotherDropdownItems: DropdownItem[] = [
@@ -48,10 +54,9 @@ export class NavbarComponent {
 
   constructor(private router: Router) {}
 
-  onSelect(option: string, link?: string): void {
-    this.selectedOption = option;
-    if (link) {
-      this.router.navigate([link]);
+  onSelect(item : DropdownItem): void {
+    if (item.route) {
+      this.router.navigate([item.route]);
     }
   }
 }

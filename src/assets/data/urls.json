@@ -1,13 +1,17 @@
 {
     "urls" : {
         "ide" : {
-            "eclipse" :"",
-            "springsuit" :"",
-            "intellij": ""
+            "eclipse" :"https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2023-12/R/eclipse-inst-jre-win64.exe",
+            "eclipseArchive" :"https://www.eclipse.org/downloads/packages/release",
+            "springsuit" :"https://spring.io/tools/",
+            "springArchive" : "https://github.com/spring-projects/sts4/wiki/Previous-Versions",
+            "intellij" : "https://www.jetbrains.com/idea/download/download-thanks.html?platform=windows&code=IIC",
+            "intellijArchive" : "https://www.jetbrains.com/idea/download/other.html"
         },
         "jdk" :{
-            "jdk" :"",
-            "openjdk":""
+            "jdk" :"https://www.oracle.com/java/technologies/downloads/",
+            "jdkArchive" : "https://www.oracle.com/java/technologies/downloads/archive/",
+            "openjdk":"https://jdk.java.net/21/"
         }
     }
 }
