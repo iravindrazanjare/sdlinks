@@ -1,0 +1,13 @@
+{
+    "urls" : {
+        "ide" : {
+            "eclipse" :"",
+            "springsuit" :"",
+            "intellij": ""
+        },
+        "jdk" :{
+            "jdk" :"",
+            "openjdk":""
+        }
+    }
+}

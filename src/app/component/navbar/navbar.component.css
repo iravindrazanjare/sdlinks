@@ -1,0 +1,23 @@
+.dropdown {
+    position: relative;
+    display: flex;
+    border: 1px solid #077ef6; /* Blue color code */
+    padding: 0px;
+    background-color: #ED2647; /* Blue color code */
+    color: rgb(5, 5, 5); /* Text color for contrast */
+  }
+
+.dropdown mat-mdc-menu-trigger{
+  margin-top: 20px;
+}  
+  
+  p {
+    margin-top: 10px;
+  }
+  .menu {
+    background-color: #f0ecec;
+  }
+  .dropdown img {
+    max-width: 100px; /* Adjust the maximum width of the logo as needed */
+    margin-bottom: 10px; /* Add some spacing between the logo and the text */
+  }

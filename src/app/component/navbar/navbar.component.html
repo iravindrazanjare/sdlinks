@@ -1,0 +1,50 @@
+<div class="dropdown">
+    <img src="assets/logo.png" alt="Company Logo">
+    <button mat-button [matMenuTriggerFor]="menu">Programming Tools</button>
+    <mat-menu #menu="matMenu">
+      <!-- First set of dropdown items -->
+      <ng-container *ngFor="let item of dropdownItems">
+        <button mat-menu-item [matMenuTriggerFor]="subMenu" *ngIf="item.subItems">
+          {{ item.label }}
+        </button>
+        <button mat-menu-item (click)="onSelect(item.label)" *ngIf="!item.subItems">
+          {{ item.label }}
+        </button>
+        <mat-menu #subMenu="matMenu">
+          <ng-container *ngFor="let subItem of item.subItems">
+            <button mat-menu-item [matMenuTriggerFor]="nestedSubMenu" *ngIf="subItem.subItems">
+              {{ subItem.label }}
+            </button>
+            <button mat-menu-item (click)="onSelect(subItem.label)" *ngIf="!subItem.subItems">
+              {{ subItem.label }}
+            </button>
+            <mat-menu #nestedSubMenu="matMenu">
+              <button mat-menu-item *ngFor="let nestedSubItem of subItem.subItems" (click)="onSelect(nestedSubItem.label)">
+                {{ nestedSubItem.label }}
+              </button>
+            </mat-menu>
+          </ng-container>
+        </mat-menu>
+      </ng-container>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="anotherMenu">Dropdown Menu 2</button>
+    <mat-menu #anotherMenu="matMenu">
+      <!-- Second set of dropdown items -->
+      <ng-container *ngFor="let item of anotherDropdownItems">
+        <button mat-menu-item [matMenuTriggerFor]="anotherSubMenu" *ngIf="item.subItems">
+          {{ item.label }}
+        </button>
+        <button mat-menu-item (click)="onSelect(item.label)" *ngIf="!item.subItems">
+          {{ item.label }}
+        </button>
+        <mat-menu #anotherSubMenu="matMenu">
+          <ng-container *ngFor="let subItem of item.subItems">
+            <button mat-menu-item (click)="onSelect(subItem.label)">
+              {{ subItem.label }}
+            </button>
+          </ng-container>
+        </mat-menu>
+      </ng-container>
+    </mat-menu>
+  </div>
+  
