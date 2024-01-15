@@ -6,7 +6,7 @@
     transition: background-color 0.3s ease; /* Add a smooth transition */
   
     /* Angular Material's predefined hover styles */
-    &:hover {
+    custom-button:hover {
       background-color: #4CAF50; /* Change the background color to green on hover */
     }
   }
